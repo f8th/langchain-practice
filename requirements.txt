@@ -4,6 +4,9 @@ langchain-core
 
 langchain_community
 
+#LangGraph
+langgraph
+
 # OpenAI Integration
 langchain-openai
 openai
