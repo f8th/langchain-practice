@@ -32,3 +32,5 @@ Thumbs.db
 
 # personal files
 ayush.txt
+
+*.db*
