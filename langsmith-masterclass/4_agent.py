@@ -4,9 +4,12 @@ import requests
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain import hub
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
+os.environ['LANGCHAIN_PROJECT'] = 'Agent Project'
 
 search_tool = DuckDuckGoSearchRun()
 
@@ -45,8 +48,12 @@ agent_executor = AgentExecutor(
 # What is the current temp of gurgaon
 # Identify the birthplace city of Kalpana Chawla (search) and give its current temperature.
 
+config = {
+    "run_name": "Agent"
+}
+
 # Step 5: Invoke
-response = agent_executor.invoke({"input": "What is the current temp of gurgaon"})
+response = agent_executor.invoke({"input": "What is the current temp of Ballia U.P."}, config=config)
 print(response)
 
 print(response['output'])
