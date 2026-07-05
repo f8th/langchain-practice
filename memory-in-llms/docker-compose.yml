@@ -1,6 +1,7 @@
-services:
+ services:
   postgres:
     image: postgres:16
+    container_name: langgraph-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
